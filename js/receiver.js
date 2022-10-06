@@ -190,7 +190,7 @@ playerManager.setMessageInterceptor(
     // DRM
     customData = loadRequestData.media.customData;
     metadata = loadRequestData.media.metadata;
-    castDebugLogger.debug("MEDIA", JSON.stringify(loadRequestData.media))
+    // castDebugLogger.debug("MEDIA", JSON.stringify(loadRequestData.media))
 
     if (loadRequestData.media.customData) {
       playerManager.setMediaPlaybackInfoHandler((loadRequest, playbackConfig) => {
@@ -214,31 +214,31 @@ playerManager.setMessageInterceptor(
 
 
 
-      // let username = this.context?.user.name;
-      // let SUBSCRIBETYPE;
-      // let SUBSCRIBETAG;
-      // let planame = this.context?.watch?.plan?.plan_name;
+      let username = loadRequestData.media.user;
+      let SUBSCRIBETYPE;
+      let SUBSCRIBETAG;
+      let planame = loadRequestData.media.plan_name;
 
-      // if (!username) {
+      if (!username) {
 
-      //   SUBSCRIBETYPE = "Guest"
-      //   SUBSCRIBETAG = "Guest"
+        SUBSCRIBETYPE = "Guest"
+        SUBSCRIBETAG = "Guest"
 
-      // }
-      // else {
+      }
+      else {
 
-      //   if (!planame) {
+        if (!planame) {
 
-      //     SUBSCRIBETYPE = "Unsubscribed"
-      //     SUBSCRIBETAG = "LoggedIn"
-      //   }
+          SUBSCRIBETYPE = "Unsubscribed"
+          SUBSCRIBETAG = "LoggedIn"
+        }
 
-      //   else {
-      //     SUBSCRIBETYPE = "Subscribed"
-      //     SUBSCRIBETAG = planame
+        else {
+          SUBSCRIBETYPE = "Subscribed"
+          SUBSCRIBETAG = planame
 
-      //   }
-      // }
+        }
+      }
 
       let mmVideoAssetInfo = {
         "assetName": metadata.subtitle === "" ? metadata.title : metadata.subtitle,
@@ -254,6 +254,8 @@ playerManager.setMessageInterceptor(
       }
 
       castDebugLogger.debug("mmVideoAssetInfo", mmVideoAssetInfo);
+      castDebugLogger.debug("SUBSCRIBETYPE",SUBSCRIBETYPE)
+      castDebugLogger.debug("SUBSCRIBETAG",SUBSCRIBETAG)
 
 
 
