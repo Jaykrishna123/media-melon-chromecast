@@ -56,8 +56,8 @@ if (!castDebugLogger.loggerLevelByTags) {
 castDebugLogger.loggerLevelByTags[LOG_RECEIVER_TAG] =
   cast.framework.LoggerLevel.DEBUG;
 
-castDebugLogger.debug("Media Melon WATCHED", LOG_RECEIVER_TAG)
-castDebugLogger.error(LOG_RECEIVER_TAG, "Media Melon WATCHED")
+// castDebugLogger.debug("Media Melon WATCHED", LOG_RECEIVER_TAG)
+// castDebugLogger.error(LOG_RECEIVER_TAG, "Media Melon WATCHED")
 
 
 
@@ -182,9 +182,7 @@ playerManager.setMessageInterceptor(
     // DRM
     customData = loadRequestData.media.customData;
     metadata = loadRequestData.media.metadata;
-    castDebugLogger.debug("Jaykrishna", JSON.stringify(loadRequestData.media))
     castDebugLogger.debug("MEDIA", JSON.stringify(loadRequestData.media))
-    castDebugLogger.debug("Rohit", JSON.stringify(loadRequestData.media))
 
     if (loadRequestData.media.customData) {
       playerManager.setMediaPlaybackInfoHandler((loadRequest, playbackConfig) => {
@@ -198,6 +196,61 @@ playerManager.setMessageInterceptor(
       });
 
       //intialize Media Melon
+
+
+      // let username = customData.username;
+      // let SUBSCRIBETYPE;
+      // let SUBSCRIBETAG;
+      // let planame = this.context?.watch?.plan?.plan_name;
+
+      // if (!username) {
+
+      //   SUBSCRIBETYPE = "Guest"
+      //   SUBSCRIBETAG = "Guest"
+
+      // }
+      // else {
+
+      //   if (!planame) {
+
+      //     SUBSCRIBETYPE = "Unsubscribed"
+      //     SUBSCRIBETAG = "LoggedIn"
+      //   }
+
+      //   else {
+      //     SUBSCRIBETYPE = "Subscribed"
+      //     SUBSCRIBETAG = planame
+
+      //   }
+      // }
+
+
+
+
+      // var mmvjs7Plugin = new VideoJSMMSSIntgr();
+
+      // if (mmvjs7Plugin?.getRegistrationStatus() === false) {
+      //   mmvjs7Plugin?.registerMMSmartStreaming("VideoJS", "476976526",
+      //     username,
+      //     "www.travelxp.com",
+      //     SUBSCRIBETYPE,
+      //     SUBSCRIBETAG);
+      //   mmvjs7Plugin?.reportPlayerInfo("VideoJS", "VIDEOJS", '7.19.2');
+      // }
+
+      // let mediaUrl = this.props.videojsoptions.src;
+      // let mmVideoAssetInfo = this.props.videojsoptions.mmVideoAssetInfo
+
+
+      // this.player.src({
+      //   src: mediaUrl,
+      //   mmVideoAssetInfo: mmVideoAssetInfo
+      // })
+
+
+
+      // mmvjs7Plugin?.initialize(this.player, mediaUrl, mmVideoAssetInfo, null);
+
 
 
 
