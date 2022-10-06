@@ -242,8 +242,8 @@ playerManager.setMessageInterceptor(
 
       let mmVideoAssetInfo = {
         "assetName": metadata.subtitle === "" ? metadata.title : metadata.subtitle,
-        "assetId": customData.program_id,
-        "videoId": customData.program_id,
+        "assetId": customData.programid,
+        "videoId": customData.programid,
         "contentType": metadata.subtitle === "" ? "Trailer" : "Episode",
         "title": metadata.title,
         "drmProtection": customData.protectionSystem,
