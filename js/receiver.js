@@ -13,7 +13,6 @@ const CONTENT_URL =
 const context = cast.framework.CastReceiverContext.getInstance();
 const playerManager = context.getPlayerManager();
 
-var mmvjs7Plugin = new VideoJSMMSSIntgr();
 
 
 
@@ -23,6 +22,8 @@ var mmvjs7Plugin = new VideoJSMMSSIntgr();
 const LOG_RECEIVER_TAG = 'Receiver';
 let customData;
 let metadata;
+let mmvjs7Plugin = new VideoJSMMSSIntgr();
+
 /**
  * Debug Logger
  */
