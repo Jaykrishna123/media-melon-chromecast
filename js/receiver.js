@@ -197,6 +197,9 @@ playerManager.setMessageInterceptor(
 
       //intialize Media Melon
 
+      castDebugLogger.debug("CUSTOMDATA", customData)
+      castDebugLogger.debug("METADATA", metadata)
+
 
       // let username = customData.username;
       // let SUBSCRIBETYPE;
