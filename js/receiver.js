@@ -22,7 +22,6 @@ const playerManager = context.getPlayerManager();
 const LOG_RECEIVER_TAG = 'Receiver';
 let customData;
 let metadata;
-// let mmvjs7Plugin = new VideoJSMMSSIntgr();
 
 /**
  * Debug Logger
@@ -206,14 +205,16 @@ playerManager.setMessageInterceptor(
 
       //intialize Media Melon
 
+      // let mmvjs7Plugin = new VideoJSMMSSIntgr();
+
+
 
       castDebugLogger.debug("CUSTOMDATA", customData)
       castDebugLogger.debug("METADATA", metadata)
-      castDebugLogger.debug("CONTEXT", context)
 
 
 
-      // let username = customData.username;
+      // let username = this.context?.user.name;
       // let SUBSCRIBETYPE;
       // let SUBSCRIBETAG;
       // let planame = this.context?.watch?.plan?.plan_name;
@@ -239,19 +240,20 @@ playerManager.setMessageInterceptor(
       //   }
       // }
 
-      // options.mmVideoAssetInfo = {
-      //   "assetName": data.type === "program" ? data.program_name : data.title,
-      //   "assetId": data._id,
-      //   "videoId": data._id,
-      //   "contentType": data.title ? 'Episode' : 'Trailor',
-      //   "title": data.type === "program" ? data.program_name : data.title,
-      //   "drmProtection": drmType,
-      //   "episodeNumber": data.episode,
-      //   "season": data.season,
-      //   "seriesTitle": data.program_name,
-      //   "videoType": "SVOD",
-      // }
-  
+      let mmVideoAssetInfo = {
+        "assetName": metadata.subtitle === "" ? metadata.title : metadata.subtitle,
+        "assetId": customData._id,
+        "videoId": customData._id,
+        "contentType": metadata.subtitle === "" ? "Trailer" : "Episode",
+        "title": metadata.title,
+        "drmProtection": customData.protectionSystem,
+        "episodeNumber": customData.episode,
+        "season": customData.season,
+        "seriesTitle": metadata.subtitle,
+        "videoType": "SVOD",
+      }
+
+      castDebugLogger.debug("mmVideoAssetInfo", mmVideoAssetInfo);
 
 
 
