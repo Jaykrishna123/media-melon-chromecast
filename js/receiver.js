@@ -249,7 +249,7 @@ playerManager.setMessageInterceptor(
         "drmProtection": customData.protectionSystem,
         "episodeNumber": metadata.episode,
         "season": metadata.season,
-        "seriesTitle": metadata.subtitle,
+        "seriesTitle": metadata.subtitle === "" ? metadata.title : metadata.subtitle,
         "videoType": "SVOD",
       }
 
