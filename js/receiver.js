@@ -189,31 +189,33 @@ playerManager.setMessageInterceptor(
         return playbackConfig
       });
 
+      //intialize Media Melon
+
       //initialize youbora plugin
-      let options = {
-        "enable": true,
-        "username": customData.username,
-        'session.context': true, // *read context note
-        "content.title": metadata.title,
-        "content.duration": customData.dur,
-        "content.isLive": false,
-        'content.id': customData._id,
-        'content.type': metadata.subtitle === "" ? "Trailer" : "Episode",
-        'content.program': metadata.subtitle === "" ? metadata.title : metadata.subtitle
-      }
-      castDebugLogger.debug("OPTIONS",JSON.stringify(options))
-      castDebugLogger.debug("YOUBORA_TYPE",typeof youbora)
-      if (typeof youbora != "undefined") {
-        window.plugin = new youbora.Plugin({ accountCode: 'travelxpdev' });
-        castDebugLogger.debug("PLUGIN_TYPE",typeof window.plugin)
-        plugin.setOptions(options);
-        try {
-        plugin.setAdapter(new youbora.adapters.Chromecast('castMediaElement'))
-        }
-        catch(error){
-          castDebugLogger.error("YOUBORA_ADAPTER",error)
-        }
-      }
+      // let options = {
+      //   "enable": true,
+      //   "username": customData.username,
+      //   'session.context': true, // *read context note
+      //   "content.title": metadata.title,
+      //   "content.duration": customData.dur,
+      //   "content.isLive": false,
+      //   'content.id': customData._id,
+      //   'content.type': metadata.subtitle === "" ? "Trailer" : "Episode",
+      //   'content.program': metadata.subtitle === "" ? metadata.title : metadata.subtitle
+      // }
+      // castDebugLogger.debug("OPTIONS",JSON.stringify(options))
+      // castDebugLogger.debug("YOUBORA_TYPE",typeof youbora)
+      // if (typeof youbora != "undefined") {
+      //   window.plugin = new youbora.Plugin({ accountCode: 'travelxpdev' });
+      //   castDebugLogger.debug("PLUGIN_TYPE",typeof window.plugin)
+      //   plugin.setOptions(options);
+      //   try {
+      //   plugin.setAdapter(new youbora.adapters.Chromecast('castMediaElement'))
+      //   }
+      //   catch(error){
+      //     castDebugLogger.error("YOUBORA_ADAPTER",error)
+      //   }
+      // }
     }
     return loadRequestData;
   }
