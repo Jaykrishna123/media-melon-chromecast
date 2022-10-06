@@ -260,17 +260,16 @@ playerManager.setMessageInterceptor(
 
 
 
-      // if (mmvjs7Plugin?.getRegistrationStatus() === false) {
-      //   mmvjs7Plugin?.registerMMSmartStreaming("VideoJS", "476976526",
-      //     username,
-      //     "www.travelxp.com",
-      //     SUBSCRIBETYPE,
-      //     SUBSCRIBETAG);
-      //   mmvjs7Plugin?.reportPlayerInfo("VideoJS", "VIDEOJS", '7.19.2');
-      // }
+      if (mmvjs7Plugin?.getRegistrationStatus() === false) {
+        mmvjs7Plugin?.registerMMSmartStreaming("VideoJS", "476976526",
+          username,
+          "www.travelxp.com",
+          SUBSCRIBETYPE,
+          SUBSCRIBETAG);
+        mmvjs7Plugin?.reportPlayerInfo("VideoJS", "VIDEOJS", '7.19.2');
+      }
 
-      // let mediaUrl = this.props.videojsoptions.src;
-      // let mmVideoAssetInfo = this.props.videojsoptions.mmVideoAssetInfo
+      let mediaUrl = loadRequestData.media.contentId;
 
 
       // this.player.src({
@@ -280,7 +279,7 @@ playerManager.setMessageInterceptor(
 
 
 
-      // mmvjs7Plugin?.initialize(this.player, mediaUrl, mmVideoAssetInfo, null);
+      mmvjs7Plugin?.initialize(castMediaElement, mediaUrl, mmVideoAssetInfo, null);
 
 
 
