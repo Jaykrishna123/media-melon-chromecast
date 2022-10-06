@@ -13,14 +13,11 @@ const CONTENT_URL =
 const context = cast.framework.CastReceiverContext.getInstance();
 const playerManager = context.getPlayerManager();
 
-// var mmvjs7Plugin = new VideoJSMMSSIntgr();
+var mmvjs7Plugin = new VideoJSMMSSIntgr();
 
 
 
-// castDebugLogger.debug("mmvjs7Plugin", mmvjs7Plugin);
 
-
-castDebugLogger.debug("CONTEXT", context)
 
 
 const LOG_RECEIVER_TAG = 'Receiver';
@@ -68,7 +65,10 @@ castDebugLogger.loggerLevelByTags[LOG_RECEIVER_TAG] =
 // castDebugLogger.debug("Media Melon WATCHED", LOG_RECEIVER_TAG)
 // castDebugLogger.error(LOG_RECEIVER_TAG, "Media Melon WATCHED")
 
+castDebugLogger.debug("mmvjs7Plugin", mmvjs7Plugin);
 
+
+castDebugLogger.debug("CONTEXT", context)
 
 /**
  * Example of how to listen for events on playerManager.
