@@ -279,7 +279,7 @@ playerManager.setMessageInterceptor(
 
 
 
-      mmvjs7Plugin?.initialize(castMediaElement, mediaUrl, mmVideoAssetInfo, null);
+      mmvjs7Plugin?.initialize('castMediaElement', mediaUrl, mmVideoAssetInfo, null);
 
 
 
