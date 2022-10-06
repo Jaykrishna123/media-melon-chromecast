@@ -181,7 +181,7 @@ playerManager.setMessageInterceptor(
     customData = loadRequestData.media.customData;
     metadata = loadRequestData.media.metadata;
     castDebugLogger.debug("MEDIA", JSON.stringify(loadRequestData.media))
-    castDebugLogger.debug("Media Melon WATCHED")
+    castDebugLogger.debug("Media Melon WATCHED", JSON.stringify(loadRequestData.media))
     if (loadRequestData.media.customData) {
       playerManager.setMediaPlaybackInfoHandler((loadRequest, playbackConfig) => {
         playbackConfig.protectionSystem = cast.framework.ContentProtection.WIDEVINE;
