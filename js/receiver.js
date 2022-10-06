@@ -242,13 +242,13 @@ playerManager.setMessageInterceptor(
 
       let mmVideoAssetInfo = {
         "assetName": metadata.subtitle === "" ? metadata.title : metadata.subtitle,
-        "assetId": customData._id,
-        "videoId": customData._id,
+        "assetId": customData.program_id,
+        "videoId": customData.program_id,
         "contentType": metadata.subtitle === "" ? "Trailer" : "Episode",
         "title": metadata.title,
         "drmProtection": customData.protectionSystem,
-        "episodeNumber": customData.episode,
-        "season": customData.season,
+        "episodeNumber": metadata.episode,
+        "season": metadata.season,
         "seriesTitle": metadata.subtitle,
         "videoType": "SVOD",
       }
