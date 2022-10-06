@@ -191,6 +191,9 @@ playerManager.setMessageInterceptor(
 
       //intialize Media Melon
 
+      castDebugLogger.debug("Media Melon WATCHED")
+
+
       //initialize youbora plugin
       // let options = {
       //   "enable": true,
