@@ -69,7 +69,6 @@ castDebugLogger.loggerLevelByTags[LOG_RECEIVER_TAG] =
 // castDebugLogger.debug("mmvjs7Plugin", mmvjs7Plugin);
 
 
-castDebugLogger.debug("CONTEXT", context)
 
 /**
  * Example of how to listen for events on playerManager.
@@ -210,6 +209,8 @@ playerManager.setMessageInterceptor(
 
       castDebugLogger.debug("CUSTOMDATA", customData)
       castDebugLogger.debug("METADATA", metadata)
+      castDebugLogger.debug("CONTEXT", context)
+
 
 
       // let username = customData.username;
