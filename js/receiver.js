@@ -205,8 +205,9 @@ playerManager.setMessageInterceptor(
 
       //intialize Media Melon
 
-      // let mmvjs7Plugin = new VideoJSMMSSIntgr();
+      let mmvjs7Plugin = new VideoJSMMSSIntgr();
 
+      castDebugLogger.debug("mmvjs7Plugin", mmvjs7Plugin)
 
 
       castDebugLogger.debug("CUSTOMDATA", customData)
@@ -254,8 +255,8 @@ playerManager.setMessageInterceptor(
       }
 
       castDebugLogger.debug("mmVideoAssetInfo", mmVideoAssetInfo);
-      castDebugLogger.debug("SUBSCRIBETYPE",SUBSCRIBETYPE)
-      castDebugLogger.debug("SUBSCRIBETAG",SUBSCRIBETAG)
+      castDebugLogger.debug("SUBSCRIBETYPE", SUBSCRIBETYPE)
+      castDebugLogger.debug("SUBSCRIBETAG", SUBSCRIBETAG)
 
 
 
