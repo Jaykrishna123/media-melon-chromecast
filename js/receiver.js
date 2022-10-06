@@ -13,6 +13,15 @@ const CONTENT_URL =
 const context = cast.framework.CastReceiverContext.getInstance();
 const playerManager = context.getPlayerManager();
 
+var mmvjs7Plugin = new VideoJSMMSSIntgr();
+
+
+
+castDebugLogger.debug("mmvjs7Plugin", mmvjs7Plugin);
+
+
+castDebugLogger.debug("CONTEXT", context)
+
 
 const LOG_RECEIVER_TAG = 'Receiver';
 let customData;
@@ -197,6 +206,7 @@ playerManager.setMessageInterceptor(
 
       //intialize Media Melon
 
+
       castDebugLogger.debug("CUSTOMDATA", customData)
       castDebugLogger.debug("METADATA", metadata)
 
@@ -227,10 +237,21 @@ playerManager.setMessageInterceptor(
       //   }
       // }
 
+      // options.mmVideoAssetInfo = {
+      //   "assetName": data.type === "program" ? data.program_name : data.title,
+      //   "assetId": data._id,
+      //   "videoId": data._id,
+      //   "contentType": data.title ? 'Episode' : 'Trailor',
+      //   "title": data.type === "program" ? data.program_name : data.title,
+      //   "drmProtection": drmType,
+      //   "episodeNumber": data.episode,
+      //   "season": data.season,
+      //   "seriesTitle": data.program_name,
+      //   "videoType": "SVOD",
+      // }
+  
 
 
-
-      // var mmvjs7Plugin = new VideoJSMMSSIntgr();
 
       // if (mmvjs7Plugin?.getRegistrationStatus() === false) {
       //   mmvjs7Plugin?.registerMMSmartStreaming("VideoJS", "476976526",
