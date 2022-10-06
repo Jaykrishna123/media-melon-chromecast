@@ -56,7 +56,9 @@ if (!castDebugLogger.loggerLevelByTags) {
 castDebugLogger.loggerLevelByTags[LOG_RECEIVER_TAG] =
   cast.framework.LoggerLevel.DEBUG;
 
-castDebugLogger.debug("Media Melon WATCHED")
+castDebugLogger.error("Media Melon WATCHED", LOG_RECEIVER_TAG)
+castDebugLogger.debug(LOG_RECEIVER_TAG, "Media Melon WATCHED")
+
 
 
 /**
@@ -181,7 +183,7 @@ playerManager.setMessageInterceptor(
     customData = loadRequestData.media.customData;
     metadata = loadRequestData.media.metadata;
     castDebugLogger.debug("MEDIA", JSON.stringify(loadRequestData.media))
-    castDebugLogger.error("Media Melon WATCHED", LOG_RECEIVER_TAG)
+
     if (loadRequestData.media.customData) {
       playerManager.setMediaPlaybackInfoHandler((loadRequest, playbackConfig) => {
         playbackConfig.protectionSystem = cast.framework.ContentProtection.WIDEVINE;
