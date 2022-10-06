@@ -22,7 +22,7 @@ const playerManager = context.getPlayerManager();
 const LOG_RECEIVER_TAG = 'Receiver';
 let customData;
 let metadata;
-let mmvjs7Plugin = new VideoJSMMSSIntgr();
+// let mmvjs7Plugin = new VideoJSMMSSIntgr();
 
 /**
  * Debug Logger
@@ -66,7 +66,7 @@ castDebugLogger.loggerLevelByTags[LOG_RECEIVER_TAG] =
 // castDebugLogger.debug("Media Melon WATCHED", LOG_RECEIVER_TAG)
 // castDebugLogger.error(LOG_RECEIVER_TAG, "Media Melon WATCHED")
 
-castDebugLogger.debug("mmvjs7Plugin", mmvjs7Plugin);
+// castDebugLogger.debug("mmvjs7Plugin", mmvjs7Plugin);
 
 
 castDebugLogger.debug("CONTEXT", context)
