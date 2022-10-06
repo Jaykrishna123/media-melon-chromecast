@@ -56,6 +56,9 @@ if (!castDebugLogger.loggerLevelByTags) {
 castDebugLogger.loggerLevelByTags[LOG_RECEIVER_TAG] =
   cast.framework.LoggerLevel.DEBUG;
 
+castDebugLogger.debug("Media Melon WATCHED")
+
+
 /**
  * Example of how to listen for events on playerManager.
  */
